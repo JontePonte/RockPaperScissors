@@ -18,6 +18,9 @@ class GameMaster():
     # Skriv ut "rock", "paper" eller "scissors"
     self.print_choices = False
 
+    # Skriv ut hur matcherna gått
+    self.print_games = False
+
     # Samla in en array med tävlande
     nr = self.number_of_rounds
     self.players = [
@@ -80,9 +83,10 @@ class GameMaster():
       # Print av matchresultat
       print(" ")
       print(self.players[p1].name)
-      print("Won ",self.players[p1].victories)
-      print("Lost",self.players[p1].losses)
-      print("Draw",self.players[p1].draws)
+      if self.print_games:
+        print("Won ",self.players[p1].victories)
+        print("Lost",self.players[p1].losses)
+        print("Draw",self.players[p1].draws)
       print("W,L,D",sum(self.players[p1].victories),sum(self.players[p1].losses),sum(self.players[p1].draws))
 
       # Återställ player1 så de andra kan utmana den sen
