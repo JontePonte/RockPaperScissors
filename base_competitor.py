@@ -1,3 +1,4 @@
+
 # Grundklass för tävlande
 class Competitor():
     def __init__(self, nr):
