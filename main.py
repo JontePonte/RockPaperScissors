@@ -9,6 +9,12 @@ from competitors.SmartStatistic import SmartStatisticAll, SmartStatisticFive
 from competitors.ContinueWin import ContinueWin80
 from competitors.Advanced_v1 import Advanced_v1
 
+"""""
+GameMaster är huvudprogrammet som testar spelarna mot varandra
+Samla array för spelare styr vilka som är med
+
+"""""
+
 class GameMaster():
   def __init__(self):
 
