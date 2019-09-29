@@ -8,6 +8,13 @@ from competitors.LoseSwitch import LoseSwitchRandom, LoseSwitchSmart, LoseSwitch
 from competitors.SmartStatistic import SmartStatisticAll, SmartStatisticFive
 from competitors.ContinueWin import ContinueWin80
 from competitors.Advanced_v1 import Advanced_v1
+from competitors.TensorFlow_v1 import TF_v1
+
+"""""
+GameMaster är huvudprogrammet som testar spelarna mot varandra
+Samla array för spelare styr vilka som är med
+
+"""""
 
 class GameMaster():
   def __init__(self):
@@ -24,17 +31,18 @@ class GameMaster():
     # Samla in en array med tävlande
     nr = self.number_of_rounds
     self.players = [
-      AllwaysPaper(nr),           # 0
-      TotalyRandom(nr),           # 1
+      #AllwaysPaper(nr),           # 0
+      #TotalyRandom(nr),           # 1
       RockBiasRandom(nr),         # 2
-      LastChoice(nr),             # 3
-      LoseSwitchRandom(nr),       # 4
-      LoseSwitchSmart(nr),        # 5
-      LoseSwitchTricky(nr),       # 6
-      SmartStatisticAll(nr),      # 7
-      SmartStatisticFive(nr),     # 8
-      ContinueWin80(nr),          # 9
-      Advanced_v1(nr)             # 10
+      #LastChoice(nr),             # 3
+      #LoseSwitchRandom(nr),       # 4
+      #LoseSwitchSmart(nr),        # 5
+      #LoseSwitchTricky(nr),       # 6
+      #SmartStatisticAll(nr),      # 7
+      #SmartStatisticFive(nr),     # 8
+      #ContinueWin80(nr),          # 9
+      #Advanced_v1(nr),            # 10
+      TF_v1(nr)                   # 11
       ]
     # Övriga variabler
     self.res = 0
