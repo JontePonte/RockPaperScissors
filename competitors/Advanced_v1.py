@@ -1,4 +1,4 @@
-from base_competitor import Competitor
+from Base_competitor import Competitor
 import random
 
 

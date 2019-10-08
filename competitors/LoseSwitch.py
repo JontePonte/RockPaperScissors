@@ -1,5 +1,5 @@
-from base_competitor import Competitor
-from functions import test
+from Base_competitor import Competitor
+from Functions import test
 import random
 
 

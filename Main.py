@@ -1,9 +1,9 @@
 
 # Importera funktioner
-from functions import test
+from Functions import test
 
 # Import av alla spelare
-from competitors.simple import AllwaysPaper, TotalyRandom, RockBiasRandom, LastChoice
+from competitors.Simple import AllwaysPaper, TotalyRandom, RockBiasRandom, LastChoice
 from competitors.LoseSwitch import LoseSwitchRandom, LoseSwitchSmart, LoseSwitchTricky
 from competitors.SmartStatistic import SmartStatisticAll, SmartStatisticFive
 from competitors.ContinueWin import ContinueWin80

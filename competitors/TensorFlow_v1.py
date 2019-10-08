@@ -1,5 +1,5 @@
 # imports
-from base_competitor import Competitor
+from Base_competitor import Competitor
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
@@ -24,7 +24,7 @@ class TF_v1(Competitor):
             other = self.otherchoices[0:self.round]
             my = self.mychoices[0:self.round]
             correct_choice = self.correct_choice[0:self.round]
-            input_data = other + my + correct_choice
+            input_data = other + my
 
             ### Fix correct data vector [0,0,1]
 
@@ -36,9 +36,9 @@ class TF_v1(Competitor):
             """ Create structure for the Neural Network """
 
             model = keras.Sequential([
-                keras.layers.Input(range(input_data)),      ### Figure this one out...
+                keras.layers.Flatten(len(input_data)),      ### Figure this one out...
                 keras.layers.Dense(32, activation="relu"),
-                keras.layers.Dense(self.round, activation="softmax")
+                keras.layers.Dense(len(correct_choice), activation="softmax")
                 ])
             # Set optimizer, loss function and correction metrics
             model.compile(optimmizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
